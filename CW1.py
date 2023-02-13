@@ -105,9 +105,9 @@ def check_solution(grid_input):
     '''
 
     def verif_list(vals_list):
-	'''
-	check all digits in length of given list are within given list (example in list length 6 should contain 1-6)
-	'''
+        '''
+        check all digits in length of given list are within given list (example in list length 6 should contain 1-6)
+        '''
         for i in range(len(vals_list)):
             if (i+1) not in vals_list:
     #            print('returned False')
@@ -116,18 +116,18 @@ def check_solution(grid_input):
         return True
 
     def verif_rows(grid_input):
-	'''
-	iterate through the inner 1d lists pass to check 1-n within list
-	'''
+        '''
+        iterate through the inner 1d lists pass to check 1-n within list
+        '''
         for row in grid_input:
             if not verif_list(row):
                 return False
         return True
 
     def verif_columns(grid_input):
-	'''
-	iterate amount of times of height of 2d list, and iterate for number of columns, taking each number from same position in each row to pass in list
-	'''
+        '''
+        iterate amount of times of height of 2d list, and iterate for number of columns, taking each number from same position in each row to pass in list
+        '''
         for column_num in range(len(grid_input[0])):
             column_list = []
             for row in grid_input:
@@ -137,10 +137,10 @@ def check_solution(grid_input):
         return True
 
     def verif_grid(grid_input):
-	'''
-	iterate through the grids and within each grid pass all the digits as a list to list checker
-	'''
-	for grid_row in range(0,len(grid_input[0]),grid_input[2]):
+        '''
+        iterate through the grids and within each grid pass all the digits as a list to list checker
+        '''
+        for grid_row in range(0,len(grid_input[0]),grid_input[2]):
             for grid_column in range(0,len(grid_input[0][0]),grid_input[1]):
                 temp_grid_list = []
                 for block_row in range(grid_input[1]):
